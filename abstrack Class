@@ -1,0 +1,26 @@
+//file1
+public abstract class kategori_bangun_datar {
+    public abstract double hitungluas();
+}
+
+//file2
+public class persegi_panjang extends kategori_bangun_datar {
+    private double panjang;
+    private double lebar;
+
+    public persegi_panjang(double panjang,double lebar){
+        this.panjang=panjang;
+        this.lebar=lebar;
+    }
+    public double hitungluas(){
+        return panjang * lebar;
+    }
+}
+//file3
+public class luas_dan_keliling {
+    public  static void main(String[]args){
+        kategori_bangun_datar obyek1= new persegi_panjang(5,4){
+            };
+        System.out.println("Luas Persegi panjang adalah =" + obyek1.hitungluas());
+        }
+    }
