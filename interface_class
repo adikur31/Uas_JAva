@@ -1,0 +1,28 @@
+public interface  k_bangun_datar {
+    public abstract double hitungLuas();
+
+}
+public class persegi_panjang2 implements k_bangun_datar {
+    private double panjang;
+    private double lebar;
+
+    public persegi_panjang2(double panjang,double lebar){
+        this.panjang=panjang;
+        this.lebar=lebar;
+    }
+    public double hitungLuas(){
+        return panjang*lebar;
+    }
+
+
+}
+
+public class Luas{
+    public  static void main(String[]args){
+        k_bangun_datar obyek2= new persegi_panjang2(6,4){
+        };
+        System.out.println("Luas Persegi panjang adalah =" + obyek2.hitungLuas());
+
+    }
+
+}
